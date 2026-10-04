@@ -1,1 +1,46 @@
 @import "tailwindcss";
+
+/* CXM brand tokens — mirrors the "IB Academy / Color" variables in Figma */
+@theme {
+  --color-brand-green: #7cbe56;
+  --color-brand-green-deep: #099f49;
+  --color-brand-green-tint: #f4fef3;
+  /* Higher-contrast green for text, links and primary buttons on light backgrounds */
+  --color-brand-green-strong: #067a37;
+  --color-brand-navy: #131927;
+
+  --color-canvas: #f5f7f9;
+  --color-surface: #ffffff;
+  --color-line: #e5e7ea;
+
+  --color-ink: #131927;
+  --color-muted: #6d717f;
+  --color-subtle: #9aa0ae;
+  /* Secondary text on the navy top bar and dark panels */
+  --color-muted-on-dark: #a9aebb;
+
+  --color-positive: #43b75d;
+  --color-negative: #ee443f;
+  --color-negative-strong: #c92a25;
+
+  --color-chart-1: #099f49;
+  --color-chart-2: #3b82f6;
+  --color-chart-3: #f59e0b;
+  --color-chart-4: #8b5cf6;
+  --color-chart-5: #ec4899;
+  --color-chart-6: #14b8a6;
+}
+
+@theme inline {
+  --font-sans: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
+}
+
+/* CXM primary gradient used on buttons and the logo mark */
+@utility bg-brand-gradient {
+  background-image: linear-gradient(90deg, #099f49 0%, #7cbe56 100%);
+}
+
+body {
+  background: var(--color-canvas);
+  color: var(--color-ink);
+}
