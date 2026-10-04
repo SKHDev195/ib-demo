@@ -62,11 +62,12 @@ export const quickCheck = {
   feedback: "Correct. You keep the $3 difference on every lot that sub-IB’s clients trade.",
 };
 
-export const applyThisWeek = [
-  { text: "Review the rate each sub-IB gets", done: true },
-  { text: "Move your override into the 20–40% range", done: false },
-  { text: "Set a higher rate for funded accounts", done: false },
-  { text: "Confirm splits in the CXM partner portal", done: false },
+/** Activities suggested by the lesson. Shown as a plain list; they aren't added to the action plan. */
+export const possibleActivities = [
+  "Review the rate each sub-IB gets",
+  "Move your override into the 20–40% range",
+  "Set a higher rate for funded accounts",
+  "Confirm splits in the CXM partner portal",
 ];
 
 export const nextLesson = "Onboarding sub-IBs";

@@ -5,11 +5,11 @@ import { Pill } from "@/components/ui/pill";
 import { ProgressBar } from "@/components/ui/progress-bar";
 import { cn } from "@/lib/cn";
 import {
-  applyThisWeek,
   courseLessons,
   lessonCallouts,
   lessonMeta,
   nextLesson,
+  possibleActivities,
   quickCheck,
   rateRules,
   subIbs,
@@ -282,30 +282,18 @@ export function LessonArticle() {
 
 /* ---------- Right: apply it ---------- */
 
-export function ApplyThisWeek() {
+export function PossibleActivities() {
   return (
-    <Card as="aside" padding="none" className="w-[272px] shrink-0 space-y-3.5 p-5">
-      <h2 className="text-sm font-semibold">Apply it this week</h2>
+    <Card as="aside" padding="none" aria-label="Possible activities" className="w-[272px] shrink-0 space-y-3.5 p-5">
+      <h2 className="text-sm font-semibold">Possible activities</h2>
       <ul className="space-y-3.5">
-        {applyThisWeek.map((a) => (
-          <li key={a.text} className="flex items-start gap-2.5">
-            {a.done ? (
-              <span className="mt-0.5 flex size-[18px] shrink-0 items-center justify-center rounded-[5px] bg-brand-green-deep text-white">
-                <Icon name="check" size={12} strokeWidth={2.5} />
-              </span>
-            ) : (
-              <span className="mt-0.5 size-[18px] shrink-0 rounded-[5px] border-[1.5px] border-line bg-surface" />
-            )}
-            <span className={cn("text-sm", a.done && "text-muted line-through")}>
-              {a.text}
-              {a.done && <span className="sr-only"> (done)</span>}
-            </span>
+        {possibleActivities.map((text) => (
+          <li key={text} className="flex items-start gap-2.5 text-sm">
+            <span aria-hidden="true" className="mt-[7px] size-1.5 shrink-0 rounded-full bg-brand-green" />
+            {text}
           </li>
         ))}
       </ul>
-      <span aria-hidden="true" className={classesFor({ fullWidth: true, children: null })}>
-        Add to your action plan
-      </span>
     </Card>
   );
 }

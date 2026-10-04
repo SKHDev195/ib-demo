@@ -1,4 +1,4 @@
-import { ApplyThisWeek, LessonArticle, LessonHeader, LessonList } from "@/components/lesson/sections";
+import { LessonArticle, LessonHeader, LessonList, PossibleActivities } from "@/components/lesson/sections";
 
 export const metadata = { title: "How sub-IB commission tiers work" };
 
@@ -10,7 +10,7 @@ export default function LessonPage() {
       <div className="flex items-start gap-5">
         <LessonList />
         <LessonArticle />
-        <ApplyThisWeek />
+        <PossibleActivities />
       </div>
     </>
   );
