@@ -20,7 +20,7 @@ export default function CustomizeDashboardPage() {
           // yet, otherwise the dashboard. Save configures the dashboard and opens it.
           <div className="flex gap-2.5">
             <Button href="/dashboard">Cancel</Button>
-            <ConfigureDashboardLink>Save dashboard</ConfigureDashboardLink>
+            <ConfigureDashboardLink how="custom">Save dashboard</ConfigureDashboardLink>
           </div>
         }
       />

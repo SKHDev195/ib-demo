@@ -42,7 +42,7 @@ export default function ConnectChannelsPage() {
               13 of 15 metrics are ready. The 2 YouTube metrics stay empty until you connect YouTube.
             </p>
             {/* Takes the suggested preset: /dashboard shows Screen 02 from now on. */}
-            <ConfigureDashboardLink iconRight="arrowRight" fullWidth>
+            <ConfigureDashboardLink how="preset" iconRight="arrowRight" fullWidth>
               Open dashboard
             </ConfigureDashboardLink>
           </Card>

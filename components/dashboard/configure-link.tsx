@@ -8,13 +8,16 @@ import { markDashboardConfigured } from "@/lib/dashboard-setup";
 
 /**
  * Primary button that marks the dashboard as configured, then opens it.
- * Used for "Open dashboard" (Screen 01b) and "Save dashboard" (Screen 03).
+ * Used for "Open dashboard" (Screen 01b, how="preset") and "Save dashboard"
+ * (Screen 03, how="custom").
  */
 export function ConfigureDashboardLink({
+  how,
   children,
   iconRight,
   fullWidth,
 }: {
+  how: "preset" | "custom";
   children: ReactNode;
   iconRight?: IconName;
   fullWidth?: boolean;
@@ -22,7 +25,7 @@ export function ConfigureDashboardLink({
   return (
     <Link
       href="/dashboard"
-      onClick={markDashboardConfigured}
+      onClick={() => markDashboardConfigured(how)}
       className={classesFor({ variant: "primary", fullWidth, children })}
     >
       {children}
